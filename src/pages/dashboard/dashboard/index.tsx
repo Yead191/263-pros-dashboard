@@ -1,78 +1,76 @@
-
 import { Card } from 'antd';
-import TotalEarning from './TotalEarning';
-import UserChart from './UserChart';
+import { Users, UserRoundCheck, CircleDollarSign, TrendingUp, TrendingDown } from 'lucide-react';
+import EarningsChart from './EarningsChart';
 
-const App: React.FC = () => {
+const Dashboard: React.FC = () => {
+    const StatCard: React.FC<{
+        icon: React.ReactNode;
+        title: string;
+        value: string;
+        bgColor: string;
+        trendIcon?: React.ReactNode;
+        trendValue?: string;
+        trendType?: 'up' | 'down';
+    }> = ({ icon, title, value, bgColor, trendValue, trendType }) => (
+        <Card className="rounded-2xl border-none h-full" style={{ backgroundColor: bgColor }}>
+            <div className="flex flex-col h-full justify-between gap-4">
+                <div className="flex flex-col gap-2">
+                    <div className="w-10 h-10 rounded-lg bg-black/5 flex items-center justify-center">{icon}</div>
+                    <p className="text-[#333333] text-sm font-medium">{title}</p>
+                </div>
 
-  const StatCard: React.FC<{ icon: string; title: string; value: string; }> = ({
-    icon,
-    title,
-    value,
+                <div className="flex items-center justify-between">
+                    <p className="text-4xl font-semibold text-[#1E1E1E]">{value}</p>
+                    {trendValue && (
+                        <div
+                            className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium text-white ${
+                                trendType === 'down' ? 'bg-[#D12C2C]' : 'bg-[#28A745]'
+                            }`}
+                        >
+                            {trendType === 'down' ? <TrendingDown size={12} /> : <TrendingUp size={12} />}
+                            {trendValue}
+                            <span className="opacity-80 ml-1">vs last month</span>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </Card>
+    );
 
-  }) => (
-    <Card className="rounded-lg shadow-sm border border-gray-200">
-      <div className="flex items-center gap-4">
-        <div className={`w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center text-2xl`}>
-          <img src={icon} alt="icon" className="w-8" />
+    return (
+        <div className=" space-y-8">
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <StatCard
+                    icon={<Users className="text-[#1E1E1E]" size={20} />}
+                    title="Total Customer"
+                    value="44,225"
+                    bgColor="#B9D9D6"
+                    trendValue="15%"
+                    trendType="down"
+                />
+                <StatCard
+                    icon={<UserRoundCheck className="text-[#1E1E1E]" size={20} />}
+                    title="Total Provider"
+                    value="1,225"
+                    bgColor="#FFE9B1"
+                    trendValue="15%"
+                    trendType="up"
+                />
+                <StatCard
+                    icon={<CircleDollarSign className="text-[#1E1E1E]" size={20} />}
+                    title="Total Earnings"
+                    value="$2,22,500"
+                    bgColor="#D3EFDC"
+                />
+            </div>
+
+            {/* Chart Section */}
+            <div className="bg-white rounded-3xl p-6 shadow-sm">
+                <EarningsChart />
+            </div>
         </div>
-        <div>
-          <p className="text-gray-500 text-sm mb-1">{title}</p>
-          <p className="text-2xl font-bold">{value}</p>
-        </div>
-      </div>
-    </Card>
-  );
-
-  return (
-    <div className=" pb-5">
-      <div className="">
-        <div className='flex flex-col gap-y-2 py-5 px-[30px] rounded-lg shadow-sm border border-gray-200 mb-6'>
-          <p className='text-[#121212]'>Hi, Good Morning</p>
-          <h2 className='text-2xl font-semibold text-[#121212]'>Welcome Back to FaceAI Dashboard</h2>
-        </div>
-        {/* Stats Cards */}
-        <p className='text-2xl font-semibold text-[#121212] pb-3'>User’s Overview</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-          <StatCard
-            icon="/icons/users.png"
-            title="Total User"
-            value="32k"
-
-          />
-          <StatCard
-            icon="/icons/earning.png"
-            title="Total Earnings"
-            value="68K"
-          />
-          <StatCard
-            icon="/icons/package.png"
-            title="Total Subscribers"
-            value="20K"
-          />
-          <StatCard
-            icon="/icons/study-notes.png"
-            title="Total Templates"
-            value="18K"
-
-          />
-        </div>
-
-        {/* Chart */}
-        <div className="grid grid-cols-12  gap-2 items-center ">
-          <div className="col-span-6 ">
-            {/* total services */}
-
-            <TotalEarning />
-          </div>
-          <div className="col-span-6 ">
-            <UserChart />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  );
+    );
 };
 
-export default App;
+export default Dashboard;

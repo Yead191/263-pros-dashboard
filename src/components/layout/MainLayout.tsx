@@ -18,7 +18,7 @@ const MainLayout: React.FC = () => {
                 </div>
 
                 <div className="  h-[calc(100vh-125px)]  ">
-                    <div className="h-full overflow-y-auto rounded-md ">
+                    <div className="h-full overflow-y-auto rounded-md pr-6">
                         <Outlet />
                     </div>
                 </div>

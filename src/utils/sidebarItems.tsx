@@ -1,32 +1,42 @@
-import { BsPatchQuestion } from 'react-icons/bs';
+import { BsGrid, BsPatchQuestion } from 'react-icons/bs';
 import { TSidebarItem } from './generateSidebarItems';
 import { LuClipboardList } from 'react-icons/lu';
-import { FcConferenceCall } from 'react-icons/fc';
+import { Crown, Users2 } from 'lucide-react';
+import { FaUsersGear } from 'react-icons/fa6';
+import { MdOutlineInsertChart } from 'react-icons/md';
+import { IoIosInformationCircle } from 'react-icons/io';
 
 const sidebarItems: TSidebarItem[] = [
     {
-        key: 'client-list',
-        label: 'Analytics',
+        key: 'dashboard',
+        label: 'Dashboard',
         path: '',
-        icon: '/icons/analtycs.png',
+        icon: <BsGrid size={22} />,
     },
     {
-        key: 'users',
-        label: 'User Management',
-        path: 'users',
-        icon: '/icons/users.png',
+        key: 'customers',
+        label: 'Customer Management',
+        path: 'customers',
+        icon: <Users2 size={22} />,
+    },
+
+    {
+        key: 'providers',
+        label: 'Provider Management',
+        path: 'providers',
+        icon: <FaUsersGear size={22} />,
     },
     {
-        key: 'administrators',
-        label: 'Administrators',
-        path: 'administrators',
-        icon: <FcConferenceCall size={22} />,
+        key: 'subscribers',
+        label: 'Subscribers',
+        path: 'subscribers',
+        icon: <Crown size={22} />,
     },
     {
-        key: 'payment',
-        label: 'Payment',
-        path: 'payment',
-        icon: '/icons/earning.png',
+        key: 'subscriptions',
+        label: 'Subscriptions',
+        path: 'subscriptions',
+        icon: <MdOutlineInsertChart size={22} />,
     },
     {
         key: 'settings',
@@ -35,22 +45,28 @@ const sidebarItems: TSidebarItem[] = [
         icon: '/icons/setting.png',
         children: [
             {
+                key: 'about-us',
+                label: 'About Us',
+                path: 'about-us',
+                icon: <IoIosInformationCircle size={22} />,
+            },
+            {
                 key: 'terms-and-condition',
                 label: 'Terms and Condition',
                 path: 'terms-and-condition',
-                icon: <LuClipboardList size={20} />,
+                icon: <LuClipboardList size={22} />,
             },
             {
                 key: 'privacy-policy',
                 label: 'Privacy Policy',
                 path: 'privacy-policy',
-                icon: <LuClipboardList size={20} />,
+                icon: <LuClipboardList size={22} />,
             },
             {
                 key: 'faq',
                 label: 'FAQ',
                 path: 'faq',
-                icon: <BsPatchQuestion size={20} />,
+                icon: <BsPatchQuestion size={22} />,
             },
         ],
     },
