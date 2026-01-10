@@ -47,7 +47,7 @@ const Sidebar = () => {
         <>
             <Link to="/">
                 <div className="flex flex-col gap-3 items-center justify-center  mb-6 bg-[#F6F7F8] h-[82px] rounded-br-xl">
-                    <img src="/Logo.png" alt="" className="h-8" />
+                    <img src="/Logo.png" alt="" className="h-6 2xl:h-8 w-fit object-contain" />
                 </div>
             </Link>
             <div className="relative h-[calc(100vh-125px)] overflow-auto pt-5 w-full bg-[#F6F7F8] px-2 rounded-r-xl">
