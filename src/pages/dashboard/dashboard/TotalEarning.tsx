@@ -1,6 +1,6 @@
-import { useState } from 'react'; 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'; 
-import {  Select, Card } from 'antd';
+import { useState } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Select, Card } from 'antd';
 import { earningsData } from '../../../demo-data/home-data';
 const { Option } = Select;
 const TotalEarning = () => {
@@ -10,11 +10,7 @@ const TotalEarning = () => {
             <Card className="mb-6 rounded-lg shadow-sm border border-gray-200">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-lg font-semibold">Chat User Growth Overview</h2>
-                    <Select
-                        value={selectedYear}
-                        onChange={setSelectedYear}
-                        className="w-24"
-                    >
+                    <Select value={selectedYear} onChange={setSelectedYear} className="w-24">
                         <Option value="2023">2023</Option>
                         <Option value="2024">2024</Option>
                         <Option value="2025">2025</Option>
@@ -23,16 +19,8 @@ const TotalEarning = () => {
                 <ResponsiveContainer width="100%" height={300}>
                     <LineChart data={earningsData}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                        <XAxis
-                            dataKey="month"
-                            stroke="#999"
-                            style={{ fontSize: '12px' }}
-                        />
-                        <YAxis
-                            stroke="#999"
-                            style={{ fontSize: '12px' }}
-                            tickFormatter={(value) => `${value}`}
-                        />
+                        <XAxis dataKey="month" stroke="#999" style={{ fontSize: '12px' }} />
+                        <YAxis stroke="#999" style={{ fontSize: '12px' }} tickFormatter={(value) => `${value}`} />
                         <Tooltip
                             formatter={(value: number) => `$${value}`}
                             contentStyle={{
@@ -40,16 +28,16 @@ const TotalEarning = () => {
                                 color: 'white !important',
                                 border: 'none',
                                 borderRadius: '8px',
-                                padding: '8px 12px'
+                                padding: '8px 12px',
                             }}
                             labelStyle={{ color: '#c61f1f' }}
                         />
                         <Line
                             type="monotone"
                             dataKey="value"
-                            stroke="#a855f7"
+                            stroke="#055E6E"
                             strokeWidth={2}
-                            dot={{ fill: '#a855f7', r: 4 }}
+                            dot={{ fill: '#055E6E', r: 4 }}
                             activeDot={{ r: 6 }}
                         />
                     </LineChart>

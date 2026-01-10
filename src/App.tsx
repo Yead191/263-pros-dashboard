@@ -6,7 +6,7 @@ function App() {
             <ConfigProvider
                 theme={{
                     token: {
-                        colorPrimary: '#A855F7',
+                        colorPrimary: '#055E6E',
                     },
                     components: {
                         Input: {

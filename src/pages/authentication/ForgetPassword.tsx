@@ -13,7 +13,7 @@ const ForgetPassword = () => {
         <ConfigProvider
             theme={{
                 token: {
-                    colorPrimary: '#A855F7',
+                    colorPrimary: '#055E6E',
                     colorBgContainer: '#F1F4F9',
                 },
                 components: {
@@ -29,11 +29,11 @@ const ForgetPassword = () => {
             }}
         >
             <div className="flex  items-center justify-center h-screen p-5 " style={{}}>
-                <div className="bg-white max-w-[630px] w-full  rounded-lg drop-shadow-2xl p-10 pt-0 ">
-                    <div className="flex flex-col justify-center items-center space-y-3 text-center mb-10">
-                        <img src="/favicon.svg" alt="" />
-                        <h1 className="text-3xl  font-medium text-center mt-2 text-[#000]">Forget Password</h1>
-                        <p className="text-xl text-gray-400">
+                <div className="bg-white max-w-[630px] w-full rounded-lg drop-shadow-2xl p-10  mb-10">
+                    <div className=" flex flex-col justify-center items-center  mb-6  text-center">
+                        <img src="/Logo.png" alt="" className="w-44 mb-4" />
+                        <h1 className="text-3xl  font-medium text-center my-2 text-[#000]">Forget Password</h1>
+                        <p className="text-lg text-gray-400">
                             Enter your email address to ger a verification code for resetting your password.
                         </p>
                     </div>
@@ -59,7 +59,7 @@ const ForgetPassword = () => {
 
                         <Form.Item>
                             <Button
-                                className="!bg-[#A855F7]"
+                                className="!bg-[#055E6E]"
                                 htmlType="submit"
                                 style={{
                                     height: 45,

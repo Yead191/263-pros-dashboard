@@ -31,7 +31,7 @@ export function ScanDetailsModal({ isOpen, onClose, scan }: ScanDetailsModalProp
                                     key={index}
                                     className="flex items-center gap-3 whiteShadow  rounded-[10px] px-4 py-3"
                                 >
-                                    <Check className="w-4 h-4 text-[#A855F7] shrink-0" />
+                                    <Check className="w-4 h-4 text-[#055E6E] shrink-0" />
                                     <span className="text-[#000000] text-sm">{strength}</span>
                                 </div>
                             ))}

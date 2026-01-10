@@ -47,7 +47,7 @@ body {
 
 /* sidebar */
 .ant-menu-submenu-selected > .ant-menu-submenu-title {
-    color: #a855f7 !important;
+    color: #055e6e !important;
 }
 .jodit-container:not(.jodit_inline) {
     border: none !important;
@@ -80,4 +80,8 @@ body {
     cursor: pointer;
     -webkit-text-decoration-skip: objects;
     transition: none !important;
+}
+
+.text-primary {
+    color: #055e6e !important;
 }

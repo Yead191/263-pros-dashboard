@@ -23,9 +23,7 @@ const UserChart = () => {
     ];
 
     return (
-        <Card className='mb-6 rounded-lg shadow-sm border border-gray-200'
-
-        >
+        <Card className="mb-6 rounded-lg shadow-sm border border-gray-200">
             <div className="px-2 flex items-center justify-between mb-4">
                 <h1 className="text-xl font-medium">Total Users Statistics</h1>
                 <Select defaultValue="2024" className="w-32 h-[40px]">
@@ -45,7 +43,7 @@ const UserChart = () => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="totalUsers" fill="#a855f7" />
+                    <Bar dataKey="totalUsers" fill="#055E6E" />
                     <Bar dataKey="newUsers" fill="#5C450D95" />
                 </BarChart>
             </ResponsiveContainer>

@@ -22,7 +22,7 @@ export function ResultsStep({ results }: ResultsStepProps) {
             <h2 className="text-xl font-semibold text-[#2F2F2F] mb-1">Your Analysis Results</h2>
             <p className="text-sm text-[#2F2F2F] mb-6">Here's your personalized facial analysis report!</p>
 
-            <div className="bg-[#A855F7] rounded-xl p-6 mb-6 text-center">
+            <div className="bg-[#055E6E] rounded-xl p-6 mb-6 text-center">
                 <div className="text-6xl font-bold text-white mb-1">{results.overallScore}</div>
                 <p className="text-purple-100 font-medium">Overall Score</p>
                 <p className="text-sm text-purple-200 mt-1">{results.rating}</p>

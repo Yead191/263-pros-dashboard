@@ -31,16 +31,19 @@ const VerifyOtp = () => {
                     },
                 },
                 token: {
-                    colorPrimary: '#A855F7',
+                    colorPrimary: '#055E6E',
                 },
             }}
         >
             <div className="flex  items-center justify-center h-screen p-5 " style={{}}>
-                <div className="bg-white max-w-[630px] w-full rounded-lg drop-shadow-2xl shadow-lg p-10 pt-0 ">
-                    <div className="text-primaryText space-y-3 text-center  flex flex-col justify-center items-center">
-                        <img src="/favicon.svg" alt="" />
-                        <h1 className="text-3xl  font-medium text-center mt-2 text-[#000]">Check your email</h1>
-                        <p>We sent a reset link to {email} enter 5 digit code that mentioned in the email</p>
+                <div className="bg-white max-w-[630px] w-full rounded-lg drop-shadow-2xl p-10  mb-10">
+                    <div className=" flex flex-col justify-center items-center  mb-6  text-center">
+                        <img src="/Logo.png" alt="" className="w-44 mb-4" />
+                        <h1 className="text-3xl  font-medium text-center my-2 text-[#000]">Check your email</h1>
+
+                        <p className="text-lg text-gray-400">
+                            We sent a reset link to {email} enter 5 digit code that mentioned in the email
+                        </p>
                     </div>
 
                     <Form
@@ -61,13 +64,13 @@ const VerifyOtp = () => {
                                 }}
                                 className=""
                                 variant="filled"
-                                length={5}
+                                length={4}
                             />
                         </Form.Item>
 
                         <Form.Item>
                             <Button
-                                className="!bg-[#A855F7] mt-5"
+                                className="!bg-[#055E6E] mt-5"
                                 htmlType="submit"
                                 style={{
                                     height: 45,

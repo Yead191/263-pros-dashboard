@@ -18,7 +18,7 @@ const Login = () => {
         <ConfigProvider
             theme={{
                 token: {
-                    colorPrimary: '#A855F7',
+                    colorPrimary: '#055E6E',
 
                     colorBgContainer: '#F1F4F9',
                 },
@@ -35,9 +35,9 @@ const Login = () => {
             }}
         >
             <div className="flex items-center justify-center p-5 h-screen  ">
-                <div className="bg-white max-w-[630px] w-full rounded-lg drop-shadow-2xl p-10 pt-0 mb-10">
-                    <div className=" flex flex-col justify-center items-center  !pb-3 text-center">
-                        <img src="/favicon.svg" alt="" />
+                <div className="bg-white max-w-[630px] w-full rounded-lg drop-shadow-2xl p-10  mb-10">
+                    <div className=" flex flex-col justify-center items-center  mb-6  text-center">
+                        <img src="/Logo.png" alt="" className="w-44 mb-4" />
                         <h1 className="text-3xl text-[#000]  font-medium text-center mt-2">Login to Account!</h1>
                         <p className="text-xl text-gray-400">Please enter your email and password to continue</p>
                     </div>
@@ -77,14 +77,14 @@ const Login = () => {
                             <Form.Item name="remember" valuePropName="checked" noStyle>
                                 <Checkbox className="text-primaryText text-lg">Remember me</Checkbox>
                             </Form.Item>
-                            <Link to="/forget-password" className="text-primary text-md ">
+                            <Link to="/forget-password" className="text-primaryText text-md ">
                                 Forget password
                             </Link>
                         </div>
 
                         <Form.Item>
                             <Button
-                                className="!bg-[#A855F7]"
+                                className="!bg-[#055E6E]"
                                 htmlType="submit"
                                 style={{
                                     height: 45,

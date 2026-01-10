@@ -4,8 +4,8 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#A855F7',
-                primaryText: '#474042',
+                primary: '#055E6E',
+                primaryText: '#055E6E',
                 shadeColor: '#F9F0EC',
                 overlay: '#F6F7F8',
             },
