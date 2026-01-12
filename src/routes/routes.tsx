@@ -18,6 +18,7 @@ import SubscribersPage from '../pages/dashboard/subscriber';
 import SubscriptionPage from '../pages/dashboard/subscription';
 import AboutPage from '../pages/dashboard/about';
 import ProvidersPage from '../pages/dashboard/providers';
+import CategoryPage from '../pages/dashboard/category';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
             { path: 'reviews', element: <ReviewsPage /> },
             { path: 'subscribers', element: <SubscribersPage /> },
             { path: 'provider-management', element: <ProvidersPage /> },
+            { path: 'category-management', element: <CategoryPage /> },
             { path: 'subscriptions', element: <SubscriptionPage /> },
             { path: 'administrators', element: <Administrators /> },
             { path: 'profile', element: <Profile /> },

@@ -5,6 +5,7 @@ import { Crown, Star, Users2 } from 'lucide-react';
 import { FaUsersGear } from 'react-icons/fa6';
 import { MdOutlineInsertChart } from 'react-icons/md';
 import { IoIosInformationCircle } from 'react-icons/io';
+import { CiGrid42 } from 'react-icons/ci';
 
 const sidebarItems: TSidebarItem[] = [
     {
@@ -25,6 +26,12 @@ const sidebarItems: TSidebarItem[] = [
         label: 'Provider Management',
         path: 'provider-management',
         icon: <FaUsersGear size={22} />,
+    },
+    {
+        key: 'category',
+        label: 'Category Management',
+        path: 'category-management',
+        icon: <CiGrid42 size={22} />,
     },
     {
         key: 'reviews',
