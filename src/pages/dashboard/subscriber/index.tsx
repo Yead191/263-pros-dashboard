@@ -1,17 +1,17 @@
-import { Input, Select, Table, Rate } from 'antd';
-import { Search, Eye, Lock } from 'lucide-react';
+import { Input, Select, Table } from 'antd';
+import { Search, Info, Lock, RotateCcw } from 'lucide-react';
 import { useState } from 'react';
-import { Review, reviewMockData } from '../../../constants/reviewData';
-import ReviewDetailsModal from './components/ReviewDetailsModal';
+import { Subscriber, subscriberMockData } from '../../../constants/subscriberData';
+import SubscriberDetailsModal from './components/SubscriberDetailsModal';
 
 const { Option } = Select;
 
-export default function ReviewsPage() {
+export default function SubscribersPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+    const [selectedSubscriber, setSelectedSubscriber] = useState<Subscriber | null>(null);
 
-    const showModal = (review: Review) => {
-        setSelectedReview(review);
+    const showModal = (subscriber: Subscriber) => {
+        setSelectedSubscriber(subscriber);
         setIsModalOpen(true);
     };
 
@@ -35,51 +35,48 @@ export default function ReviewsPage() {
             key: 'businessName',
         },
         {
-            title: 'Email',
-            dataIndex: 'email',
-            key: 'email',
+            title: 'Package Type',
+            dataIndex: 'packageType',
+            key: 'packageType',
         },
         {
-            title: 'Ratings',
-            dataIndex: 'ratings',
-            key: 'ratings',
-            render: (ratings: number) => <Rate disabled defaultValue={ratings} className="text-yellow-400 text-sm" />,
+            title: 'Start Date',
+            dataIndex: 'startDate',
+            key: 'startDate',
         },
         {
-            title: 'Reviews',
-            dataIndex: 'review',
-            key: 'review',
+            title: 'End Date',
+            dataIndex: 'endDate',
+            key: 'endDate',
+        },
+        {
+            title: 'Price',
+            dataIndex: 'price',
+            key: 'price',
         },
         {
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
             render: (status: string) => (
-                <Select
-                    defaultValue={status}
-                    className="w-28 status-select"
-                    variant="borderless"
-                    dropdownStyle={{ borderRadius: '8px' }}
-                    style={{
-                        backgroundColor: status === 'Active' ? '#D6F0E0' : '#FFD1D1',
-                        color: status === 'Active' ? '#27AE60' : '#EB5757',
-                        borderRadius: '50px',
-                        textAlign: 'center',
-                    }}
+                <div
+                    className={`px-4 py-1.5 rounded-full text-center w-28 font-medium ${
+                        status === 'Active' ? 'bg-[#D6F0E0] text-[#27AE60]' : 'bg-[#FFD1D1] text-[#EB5757]'
+                    }`}
                 >
-                    <Option value="Active">Active</Option>
-                    <Option value="Inactive">Inactive</Option>
-                </Select>
+                    {status}
+                </div>
             ),
         },
         {
             title: 'Action',
             key: 'action',
-            render: (_: any, record: Review) => (
+            render: (_: any, record: Subscriber) => (
                 <div className="flex gap-4 items-center">
-                    <Eye
+                    <RotateCcw size={20} className="text-gray-400 cursor-pointer hover:text-[#055E6E]" />
+                    <Info
                         size={20}
-                        className="text-gray-500 cursor-pointer hover:text-[#055E6E]"
+                        className="text-lightBlue cursor-pointer hover:text-[#055E6E]"
                         onClick={() => showModal(record)}
                     />
                     <Lock size={20} className="text-gray-400 cursor-pointer hover:text-red-500" />
@@ -100,7 +97,7 @@ export default function ReviewsPage() {
                 >
                     <Option value="All">All</Option>
                     <Option value="Active">Active</Option>
-                    <Option value="Inactive">Inactive</Option>
+                    <Option value="Expired">Expired</Option>
                 </Select>
                 <Input
                     placeholder="Search here"
@@ -112,18 +109,36 @@ export default function ReviewsPage() {
 
             <Table
                 columns={columns}
-                dataSource={reviewMockData}
+                dataSource={subscriberMockData}
                 pagination={{ pageSize: 8, showSizeChanger: false }}
                 className="custom-table"
                 rowClassName={() => 'bg-white hover:bg-gray-50'}
             />
 
-            <ReviewDetailsModal
+            <SubscriberDetailsModal
                 isModalOpen={isModalOpen}
                 handleOk={handleOk}
                 handleCancel={handleCancel}
-                selectedReview={selectedReview}
+                selectedSubscriber={selectedSubscriber}
             />
+
+            <style>{`
+                .custom-table .ant-table-thead > tr > th {
+                    background-color: #EBEBEB !important;
+                    color: #333 !important;
+                    font-weight: 600 !important;
+                    border-bottom: none !important;
+                }
+                .custom-table .ant-table-tbody > tr > td {
+                    border-bottom: 1px solid #EBEBEB !important;
+                    padding: 16px 16px !important;
+                }
+                .custom-table {
+                    background: white;
+                    border-radius: 12px;
+                    overflow: hidden;
+                }
+            `}</style>
         </div>
     );
 }

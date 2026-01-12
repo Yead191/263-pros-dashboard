@@ -69,7 +69,7 @@ const ErrorPage = () => {
                                 </button>
 
                                 <Link
-                                    to="/profile/home"
+                                    to="/"
                                     className="group relative flex items-center justify-center px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700 cursor-pointer"
                                 >
                                     <FiHome className="mr-2 group-hover:scale-110 transition-transform duration-300" />

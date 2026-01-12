@@ -3,10 +3,10 @@ import { ExclamationCircleOutlined, CloseCircleOutlined } from '@ant-design/icon
 interface DeleteModalProps {
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
-    // handleDelete ?: () => void;
+    onConfirm?: () => void;
 }
 
-export default function DeleteModal({ isOpen, setIsOpen }: DeleteModalProps) {
+export default function DeleteModal({ isOpen, setIsOpen, onConfirm }: DeleteModalProps) {
     return (
         <Modal open={isOpen} onCancel={() => setIsOpen(false)} title="Delete Item" footer={null} width={480} centered>
             <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
@@ -40,7 +40,13 @@ export default function DeleteModal({ isOpen, setIsOpen }: DeleteModalProps) {
 
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
                 <Button onClick={() => setIsOpen(false)}>Cancel</Button>
-                <Button onClick={() => setIsOpen(false)} danger>
+                <Button
+                    onClick={() => {
+                        if (onConfirm) onConfirm();
+                        setIsOpen(false);
+                    }}
+                    danger
+                >
                     Delete
                 </Button>
             </div>

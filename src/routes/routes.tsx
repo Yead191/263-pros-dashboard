@@ -16,6 +16,8 @@ import Administrators from '../pages/dashboard/administrators';
 import Payment from '../pages/dashboard/payment/Payment';
 import CustomersPage from '../pages/dashboard/customers';
 import ReviewsPage from '../pages/dashboard/reviews';
+import SubscribersPage from '../pages/dashboard/subscriber';
+import SubscriptionPage from '../pages/dashboard/subscription';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,8 @@ const router = createBrowserRouter([
             { path: '', element: <Dashboard /> },
             { path: 'customer-management', element: <CustomersPage /> },
             { path: 'reviews', element: <ReviewsPage /> },
+            { path: 'subscribers', element: <SubscribersPage /> },
+            { path: 'subscriptions', element: <SubscriptionPage /> },
             { path: 'administrators', element: <Administrators /> },
             { path: 'payment', element: <Payment /> },
             { path: 'profile', element: <Profile /> },
