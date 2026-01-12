@@ -16,7 +16,7 @@ const sidebarItems: TSidebarItem[] = [
     {
         key: 'customers',
         label: 'Customer Management',
-        path: 'customers',
+        path: 'customer-management',
         icon: <Users2 size={22} />,
     },
 

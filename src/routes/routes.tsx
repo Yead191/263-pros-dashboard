@@ -5,7 +5,6 @@ import ForgetPassword from '../pages/authentication/ForgetPassword';
 import VerifyOtp from '../pages/authentication/VerifyOtp';
 import NewPassword from '../pages/authentication/NewPassword';
 import Dashboard from '../pages/dashboard/dashboard';
-import Users from '../pages/dashboard/users';
 import TermsAndCondition from '../pages/dashboard/terms-and-condition';
 import Profile from '../pages/dashboard/profile';
 import PrivacyPolicy from '../pages/dashboard/privacy-policy';
@@ -15,6 +14,7 @@ import FAQs from '../pages/dashboard/faq/faqs';
 import NotificationPage from '../pages/dashboard/notification';
 import Administrators from '../pages/dashboard/administrators';
 import Payment from '../pages/dashboard/payment/Payment';
+import CustomersPage from '../pages/dashboard/customers';
 
 const router = createBrowserRouter([
     {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: '', element: <Dashboard /> },
-            { path: 'users', element: <Users /> },
+            { path: 'customer-management', element: <CustomersPage /> },
             { path: 'administrators', element: <Administrators /> },
             { path: 'payment', element: <Payment /> },
             { path: 'profile', element: <Profile /> },
