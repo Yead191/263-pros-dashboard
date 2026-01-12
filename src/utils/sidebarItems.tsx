@@ -23,7 +23,7 @@ const sidebarItems: TSidebarItem[] = [
     {
         key: 'providers',
         label: 'Provider Management',
-        path: 'providers',
+        path: 'provider-management',
         icon: <FaUsersGear size={22} />,
     },
     {
