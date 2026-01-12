@@ -10,14 +10,13 @@ import Profile from '../pages/dashboard/profile';
 import PrivacyPolicy from '../pages/dashboard/privacy-policy';
 import ErrorPage from '../pages/error/ErrorPage';
 import FAQCategoryPage from '../pages/dashboard/faq';
-import FAQs from '../pages/dashboard/faq/faqs';
 import NotificationPage from '../pages/dashboard/notification';
 import Administrators from '../pages/dashboard/administrators';
-import Payment from '../pages/dashboard/payment/Payment';
 import CustomersPage from '../pages/dashboard/customers';
 import ReviewsPage from '../pages/dashboard/reviews';
 import SubscribersPage from '../pages/dashboard/subscriber';
 import SubscriptionPage from '../pages/dashboard/subscription';
+import AboutPage from '../pages/dashboard/about';
 
 const router = createBrowserRouter([
     {
@@ -31,13 +30,12 @@ const router = createBrowserRouter([
             { path: 'subscribers', element: <SubscribersPage /> },
             { path: 'subscriptions', element: <SubscriptionPage /> },
             { path: 'administrators', element: <Administrators /> },
-            { path: 'payment', element: <Payment /> },
             { path: 'profile', element: <Profile /> },
             { path: 'notification', element: <NotificationPage /> },
+            { path: 'about', element: <AboutPage /> },
             { path: 'privacy-policy', element: <PrivacyPolicy /> },
             { path: 'terms-and-condition', element: <TermsAndCondition /> },
             { path: 'faq', element: <FAQCategoryPage /> },
-            { path: 'faq/:category', element: <FAQs /> },
         ],
     },
     { path: '/login', element: <Login /> },

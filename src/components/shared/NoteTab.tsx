@@ -12,7 +12,7 @@ interface NoteTabProps {
 export default function NoteTab({
     handleContentChange,
     content,
-    height = '60vh',
+    height = '80vh',
     isDesabled = false,
     isSmallSize = false,
 }: NoteTabProps) {

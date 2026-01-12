@@ -51,9 +51,9 @@ const sidebarItems: TSidebarItem[] = [
         icon: '/icons/setting.png',
         children: [
             {
-                key: 'about-us',
+                key: 'about',
                 label: 'About Us',
-                path: 'about-us',
+                path: 'about',
                 icon: <IoIosInformationCircle size={22} />,
             },
             {
