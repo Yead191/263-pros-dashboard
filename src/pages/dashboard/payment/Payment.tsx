@@ -1,5 +1,5 @@
-import { Table } from "antd";
-import paymentData from "../../../demo-data/payment-data";
+import { Table } from 'antd';
+import paymentData from '../../../constants/payment-data';
 
 const Payment = () => {
     const columns = [
@@ -28,11 +28,11 @@ const Payment = () => {
             title: 'Date',
             dataIndex: 'date',
             key: 'date',
-        }
+        },
     ];
 
     return (
-        <div className='rounded-lg shadow-sm border border-gray-200 p-4'>
+        <div className="rounded-lg shadow-sm border border-gray-200 p-4">
             <h1 className="text-2xl font-semibold mb-4">Payment List</h1>
             <Table columns={columns} dataSource={paymentData} />
         </div>

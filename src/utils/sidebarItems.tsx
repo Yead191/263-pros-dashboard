@@ -1,7 +1,7 @@
 import { BsGrid, BsPatchQuestion } from 'react-icons/bs';
 import { TSidebarItem } from './generateSidebarItems';
 import { LuClipboardList } from 'react-icons/lu';
-import { Crown, Users2 } from 'lucide-react';
+import { Crown, Star, Users2 } from 'lucide-react';
 import { FaUsersGear } from 'react-icons/fa6';
 import { MdOutlineInsertChart } from 'react-icons/md';
 import { IoIosInformationCircle } from 'react-icons/io';
@@ -25,6 +25,12 @@ const sidebarItems: TSidebarItem[] = [
         label: 'Provider Management',
         path: 'providers',
         icon: <FaUsersGear size={22} />,
+    },
+    {
+        key: 'reviews',
+        label: 'Reviews',
+        path: 'reviews',
+        icon: <Star size={22} />,
     },
     {
         key: 'subscribers',

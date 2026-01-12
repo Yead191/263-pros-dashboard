@@ -2,7 +2,7 @@ import { BsTrash } from 'react-icons/bs';
 import { Button, Popconfirm, Table } from 'antd';
 import { useState } from 'react';
 import AdminModal from './AdminModal';
-import administratorsData from '../../../demo-data/administrators-data';
+import administratorsData from '../../../constants/administrators-data';
 
 const Administrators = () => {
     const [makeAdminModal, setMakeAdminModal] = useState(false);
@@ -46,7 +46,7 @@ const Administrators = () => {
     ];
 
     return (
-        <div className='rounded-lg shadow-sm border border-gray-200 p-4'>
+        <div className="rounded-lg shadow-sm border border-gray-200 p-4">
             <div className="flex justify-between items-center mb-4">
                 <h1 className="text-2xl font-semibold">Administrator Management</h1>
 
@@ -59,7 +59,6 @@ const Administrators = () => {
                 >
                     + Add Administrator
                 </Button>
-
             </div>
 
             <Table columns={columns} dataSource={administratorsData} />

@@ -15,6 +15,7 @@ import NotificationPage from '../pages/dashboard/notification';
 import Administrators from '../pages/dashboard/administrators';
 import Payment from '../pages/dashboard/payment/Payment';
 import CustomersPage from '../pages/dashboard/customers';
+import ReviewsPage from '../pages/dashboard/reviews';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
         children: [
             { path: '', element: <Dashboard /> },
             { path: 'customer-management', element: <CustomersPage /> },
+            { path: 'reviews', element: <ReviewsPage /> },
             { path: 'administrators', element: <Administrators /> },
             { path: 'payment', element: <Payment /> },
             { path: 'profile', element: <Profile /> },

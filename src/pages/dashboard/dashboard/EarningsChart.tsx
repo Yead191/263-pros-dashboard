@@ -1,6 +1,6 @@
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { Select, Card } from 'antd';
-import { earningsData } from '../../../demo-data/home-data';
+import { earningsData } from '../../../constants/home-data';
 
 const { Option } = Select;
 
