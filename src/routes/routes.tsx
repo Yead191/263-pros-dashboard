@@ -9,7 +9,6 @@ import TermsAndCondition from '../pages/dashboard/terms-and-condition';
 import Profile from '../pages/dashboard/profile';
 import PrivacyPolicy from '../pages/dashboard/privacy-policy';
 import ErrorPage from '../pages/error/ErrorPage';
-import FAQCategoryPage from '../pages/dashboard/faq';
 import NotificationPage from '../pages/dashboard/notification';
 import Administrators from '../pages/dashboard/administrators';
 import CustomersPage from '../pages/dashboard/customers';
