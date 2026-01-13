@@ -1,4 +1,4 @@
-import { BsGrid, BsPatchQuestion } from 'react-icons/bs';
+import { BsGrid } from 'react-icons/bs';
 import { TSidebarItem } from './generateSidebarItems';
 import { LuClipboardList } from 'react-icons/lu';
 import { Crown, Star, Users2 } from 'lucide-react';
@@ -75,12 +75,12 @@ const sidebarItems: TSidebarItem[] = [
                 path: 'privacy-policy',
                 icon: <LuClipboardList size={22} />,
             },
-            {
-                key: 'faq',
-                label: 'FAQ',
-                path: 'faq',
-                icon: <BsPatchQuestion size={22} />,
-            },
+            // {
+            //     key: 'faq',
+            //     label: 'FAQ',
+            //     path: 'faq',
+            //     icon: <BsPatchQuestion size={22} />,
+            // },
         ],
     },
 ];

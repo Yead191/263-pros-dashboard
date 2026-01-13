@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             { path: 'about', element: <AboutPage /> },
             { path: 'privacy-policy', element: <PrivacyPolicy /> },
             { path: 'terms-and-condition', element: <TermsAndCondition /> },
-            { path: 'faq', element: <FAQCategoryPage /> },
+            // { path: 'faq', element: <FAQCategoryPage /> },
         ],
     },
     { path: '/login', element: <Login /> },

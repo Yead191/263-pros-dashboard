@@ -96,7 +96,7 @@ export default function CustomersPage() {
                 <Input
                     placeholder="Search here"
                     prefix={<Search size={20} className="text-gray-400" />}
-                    className="w-80 rounded-full bg-[#F4F4F4] border-none"
+                    className="w-80 rounded-full bg-[#F4F4F4] border-none hover:bg-[#F4F4F4] focus-visible:bg-[#F4F4F4]"
                     size="large"
                 />
             </div>
