@@ -1,27 +1,23 @@
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { Select, Card } from 'antd';
+import { Card, DatePicker } from 'antd';
 import { earningsData } from '../../../constants/home-data';
 
-const { Option } = Select;
-
 const EarningsChart = () => {
-    // Mapping the data to match the screenshot's scale (e.g., 15k instead of 150)
     const chartData = earningsData.map((item) => ({
         ...item,
-        value: item.value * 20, // Adjusting to look more like the screenshot
+        value: item.value * 20,
     }));
+
+    const onChange: any['onChange'] = (date: any, dateString: any) => {
+        console.log(date, dateString);
+    };
 
     return (
         <Card className="rounded-2xl border-none shadow-none !p-0">
             <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl font-medium text-[#1E1E1E]">Earnings</h2>
-                <Select defaultValue="2025" className="w-24 custom-select" variant="filled">
-                    <Option value="2024">2024</Option>
-                    <Option value="2025">2025</Option>
-                    <Option value="2026">2026</Option>
-                </Select>
+                <DatePicker onChange={onChange} needConfirm />
             </div>
-
             <ResponsiveContainer width="100%" height={400}>
                 <AreaChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                     <defs>
