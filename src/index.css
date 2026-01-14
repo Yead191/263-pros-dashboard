@@ -90,7 +90,7 @@ body {
     box-shadow: none !important;
 }
 
-:where(.css-dev-only-do-not-override-hdcwjr).ant-input-outlined {
+.ant-input-outlined {
     background: #f4f4f4 !important;
     border-width: 1px !important;
     border-style: solid !important;
