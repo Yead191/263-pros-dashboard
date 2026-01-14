@@ -18,6 +18,7 @@ import SubscriptionPage from '../pages/dashboard/subscription';
 import AboutPage from '../pages/dashboard/about';
 import ProvidersPage from '../pages/dashboard/providers';
 import CategoryPage from '../pages/dashboard/category';
+import HelpSupport from '../pages/dashboard/help-support';
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
             { path: 'about', element: <AboutPage /> },
             { path: 'privacy-policy', element: <PrivacyPolicy /> },
             { path: 'terms-and-condition', element: <TermsAndCondition /> },
+            { path: 'help-support', element: <HelpSupport /> },
             // { path: 'faq', element: <FAQCategoryPage /> },
         ],
     },

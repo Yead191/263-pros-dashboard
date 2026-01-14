@@ -6,6 +6,7 @@ import { FaUsersGear } from 'react-icons/fa6';
 import { MdOutlineInsertChart } from 'react-icons/md';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { CiGrid42 } from 'react-icons/ci';
+import { RiCustomerService2Fill } from 'react-icons/ri';
 
 const sidebarItems: TSidebarItem[] = [
     {
@@ -74,6 +75,12 @@ const sidebarItems: TSidebarItem[] = [
                 label: 'Privacy Policy',
                 path: 'privacy-policy',
                 icon: <LuClipboardList size={22} />,
+            },
+            {
+                key: 'help-support',
+                label: 'Help Support',
+                path: 'help-support',
+                icon: <RiCustomerService2Fill size={22} />,
             },
             // {
             //     key: 'faq',
