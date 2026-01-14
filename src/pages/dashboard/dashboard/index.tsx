@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
             </div>
 
             {/* Chart Section */}
-            <div className="bg-white rounded-3xl p-6 shadow-sm">
+            <div className="bg-white rounded-3xl p-2 shadow-sm">
                 <EarningsChart />
             </div>
         </div>

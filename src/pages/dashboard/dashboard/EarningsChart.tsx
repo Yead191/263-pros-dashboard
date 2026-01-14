@@ -12,7 +12,7 @@ const EarningsChart = () => {
     }));
 
     return (
-        <Card className="rounded-2xl border-none shadow-none">
+        <Card className="rounded-2xl border-none shadow-none !p-0">
             <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl font-medium text-[#1E1E1E]">Earnings</h2>
                 <Select defaultValue="2025" className="w-24 custom-select" variant="filled">

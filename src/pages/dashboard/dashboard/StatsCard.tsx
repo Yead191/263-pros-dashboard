@@ -18,10 +18,10 @@ export const StatCard: React.FC<{
             </div>
 
             <div className="flex items-center justify-between">
-                <p className="text-4xl font-semibold text-[#1E1E1E]">{value}</p>
+                <p className="text-3xl 2xl:text-4xl font-semibold text-[#1E1E1E]">{value}</p>
                 {trendValue && (
                     <div
-                        className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium text-white ${
+                        className={`flex items-center gap-1 px-2 py-1 rounded text-[8px] 2xl:text-xs font-medium text-white ${
                             trendType === 'down' ? 'bg-[#D12C2C]' : 'bg-[#28A745]'
                         }`}
                     >
