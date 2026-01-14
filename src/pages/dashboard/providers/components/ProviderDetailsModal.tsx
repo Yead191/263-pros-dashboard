@@ -25,7 +25,7 @@ const ProviderDetailsModal: React.FC<ProviderDetailsModalProps> = ({
             footer={null}
             width={700}
             centered
-            className="provider-details-modal h-[85vh] overflow-auto"
+            className=" h-[85vh] overflow-auto !scrollbar-hidden "
         >
             <div className="p-4">
                 {/* Header: Avatar and Name */}
@@ -127,16 +127,6 @@ const ProviderDetailsModal: React.FC<ProviderDetailsModalProps> = ({
                     )}
                 </div>
             </div>
-
-            <style>{`
-                .provider-details-modal .ant-modal-content {
-                    border-radius: 12px !important;
-                }
-                .provider-details-modal .ant-modal-close {
-                    top: 20px;
-                    right: 20px;
-                }
-            `}</style>
         </Modal>
     );
 };

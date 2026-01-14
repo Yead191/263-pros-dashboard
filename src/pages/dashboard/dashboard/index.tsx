@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
                 <StatCard
                     icon={<CircleDollarSign className="text-[#1E1E1E]" size={20} />}
                     title="Total Earnings"
-                    value="$2,22,500"
+                    value="$222,500"
                     bgColor="#D3EFDC"
                 />
             </div>
