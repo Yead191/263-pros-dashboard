@@ -7,6 +7,7 @@ import { MdOutlineInsertChart } from 'react-icons/md';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { CiGrid42 } from 'react-icons/ci';
 import { RiCustomerService2Fill } from 'react-icons/ri';
+import { IoSettingsSharp } from 'react-icons/io5';
 
 const sidebarItems: TSidebarItem[] = [
     {
@@ -56,7 +57,7 @@ const sidebarItems: TSidebarItem[] = [
         key: 'settings',
         label: 'Settings',
         path: 'settings',
-        icon: '/icons/setting.png',
+        icon: <IoSettingsSharp size={22} />,
         children: [
             {
                 key: 'about',

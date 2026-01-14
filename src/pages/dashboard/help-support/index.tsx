@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Table, Input, Select, Space, message } from 'antd';
+import { Table, Input, Select, Space } from 'antd';
 import { Search } from 'lucide-react';
 import { MdOutlineRemoveRedEye } from 'react-icons/md';
 import { helpSupportMockData, SupportRequest } from '../../../constants/helpSupportData';
 import SupportDetailsModal from './components/SupportDetailsModal';
+import { toast } from 'sonner';
 
 export default function HelpSupport() {
     const [searchText, setSearchText] = useState('');
@@ -19,7 +20,7 @@ export default function HelpSupport() {
 
     const handleReply = (id: string, reply: string) => {
         console.log(`Replying to ${id} with: ${reply}`);
-        message.success('Reply sent successfully');
+        toast.success('Reply sent successfully');
         setRequests((prev) => prev.map((r) => (r.id === id ? { ...r, status: 'Replied' as const } : r)));
         setIsModalOpen(false);
     };

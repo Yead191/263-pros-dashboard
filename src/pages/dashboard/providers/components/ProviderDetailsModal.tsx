@@ -84,19 +84,40 @@ const ProviderDetailsModal: React.FC<ProviderDetailsModalProps> = ({
 
                 {/* Footer Buttons */}
                 <div className="flex justify-center gap-4 mt-10">
-                    <Button
-                        onClick={() => onReject(provider.id)}
-                        className="h-11 px-10 rounded-md text-red-500 border-red-500 hover:text-red-600 hover:border-red-600 font-medium"
-                    >
-                        Reject
-                    </Button>
-                    <Button
-                        type="primary"
-                        onClick={() => onApprove(provider.id)}
-                        className="h-11 px-10 rounded-md bg-[#055E6E] hover:bg-[#044a57] border-none font-medium text-white"
-                    >
-                        Approve
-                    </Button>
+                    {provider.status === 'Pending' ? (
+                        <div className="flex items-center gap-4">
+                            <Button
+                                onClick={() => onReject(provider.id)}
+                                className="h-11 px-10 rounded-md text-red-500 border-red-500 hover:text-red-600 hover:border-red-600 font-medium"
+                            >
+                                Reject
+                            </Button>
+
+                            <Button
+                                type="primary"
+                                onClick={() => onApprove(provider.id)}
+                                className="h-11 px-10 rounded-md bg-[#055E6E] hover:bg-[#044a57] border-none font-medium text-white"
+                            >
+                                Approve
+                            </Button>
+                        </div>
+                    ) : (
+                        <div className="flex items-center gap-4">
+                            <Button
+                                onClick={() => onClose()}
+                                className="h-11 px-10 rounded-md text-gray-500 border-gray-500 hover:text-gray-600 hover:border-gray-600 font-medium"
+                            >
+                                Close
+                            </Button>
+                            <Button
+                                type="primary"
+                                onClick={() => onClose()}
+                                className="h-11 px-10 rounded-md text-white! !bg-[#FF383C] hover:!bg-[#FF383C] font-medium"
+                            >
+                                Suspend
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </div>
 
