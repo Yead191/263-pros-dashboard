@@ -10,7 +10,7 @@ const Dashboard: React.FC = () => {
                 <StatCard
                     icon={<Users className="text-[#1E1E1E]" size={20} />}
                     title="Total Customer"
-                    value="44,225"
+                    value="44,225.00"
                     bgColor="#B9D9D6"
                     trendValue="15%"
                     trendType="down"
@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
                 <StatCard
                     icon={<UserRoundCheck className="text-[#1E1E1E]" size={20} />}
                     title="Total Provider"
-                    value="1,225"
+                    value="1,225.00"
                     bgColor="#FFE9B1"
                     trendValue="15%"
                     trendType="up"
@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
                 <StatCard
                     icon={<CircleDollarSign className="text-[#1E1E1E]" size={20} />}
                     title="Total Earnings"
-                    value="$222,500"
+                    value="$222,500.00"
                     bgColor="#D3EFDC"
                 />
             </div>
