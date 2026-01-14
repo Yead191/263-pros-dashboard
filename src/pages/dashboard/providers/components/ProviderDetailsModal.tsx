@@ -19,7 +19,14 @@ const ProviderDetailsModal: React.FC<ProviderDetailsModalProps> = ({
     if (!provider) return null;
 
     return (
-        <Modal open={isOpen} onCancel={onClose} footer={null} width={700} centered className="provider-details-modal">
+        <Modal
+            open={isOpen}
+            onCancel={onClose}
+            footer={null}
+            width={700}
+            centered
+            className="provider-details-modal h-[85vh] overflow-auto"
+        >
             <div className="p-4">
                 {/* Header: Avatar and Name */}
                 <div className="flex items-center gap-4 mb-6">
